@@ -233,3 +233,68 @@ textarea {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+/* --- Session 4: streak & mood emphasis --- */
+
+.streak-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0.25rem 0;
+  color: #1e3a8a;
+}
+
+.streak-copy {
+  margin-bottom: 0;
+}
+
+.mood-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.mood-current {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.flash-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.flash {
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.flash-success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.flash-error {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
