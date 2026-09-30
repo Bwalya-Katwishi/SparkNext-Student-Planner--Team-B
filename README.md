@@ -1,42 +1,43 @@
 # The [S] Factor — personalised study planner (reference)
 
-Team B **Lead-Us Sessions** reference build: HTML + CSS front end, **Flask** back end, JSON file storage. Mentees are meant to follow the same shape in their own repos.
+Team B **Lead-Us Sessions** reference build using **HTML, CSS, and JavaScript** only. Styling follows **SparkNext brand guidelines** — see [BRAND.md](BRAND.md). Tasks and notes are saved in the browser with **localStorage** (they survive a refresh on the same device/browser).
 
 ## What it does
 
-- **Tasks:** add, list, and complete study tasks (Python lists + functions, not hard-coded HTML).
-- **Notes:** free-text area saved on the server.
+- **Tasks:** add, list, and complete study tasks (JavaScript arrays + functions, rendered with the DOM).
+- **Notes:** free-text area saved in localStorage.
 - **Make it yours:** daily mood check-in and a consecutive-day **study streak** when you complete tasks.
-- **Validation:** friendly error messages for empty tasks, bad links, and broken data files.
+- **Validation:** friendly on-screen messages for empty tasks and bad saved data.
 
 ## Requirements
 
-- Python 3.10+ (3.10 is fine on Windows)
-- pip
+- A modern web browser (Chrome, Edge, Firefox, etc.)
+- Optional: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code, or any static file server
 
 ## Run locally
 
+**Easiest:** open `index.html` in your browser (double-click the file).
+
+For closer-to-real-web practice, serve the folder:
+
 ```powershell
 cd "c:\Users\bwaly\Desktop\SPARKNEXT PROJECT\study-planner"
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python app.py
+python -m http.server 8080
 ```
 
-Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+Then open [http://localhost:8080](http://localhost:8080).
 
-Saved data lives in `data/planner.json` (created on first run). Delete that file to reset.
+To reset all data: DevTools → Application → Local Storage → delete `sFactorPlanner`, or run in the console: `localStorage.removeItem('sFactorPlanner')`.
 
 ## Project layout
 
 ```
 study-planner/
-  app.py              # Flask routes and Python logic (see Session comments)
-  requirements.txt
-  templates/          # HTML (Jinja)
-  static/style.css    # Layout and theme
-  data/               # planner.json at runtime
+  index.html          # Page structure (Session 2 layout)
+  css/style.css       # Layout and theme
+  js/app.js           # Logic, storage, validation (Sessions 3–5)
+  teaching/           # Per-session code + README for live teaching
+    session-01/ … session-06/
   SESSIONS.md         # Week-by-week teaching map
 ```
 

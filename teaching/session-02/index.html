@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 2 | My Study Planner</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand-lockup">
+          <img class="brand-mark" src="../../assets/sparknext-mark.svg" width="44" height="44" alt="" />
+          <div class="brand-wordmark">
+            <span class="brand-name">SparkNext</span>
+            <span class="brand-hub">Learning Hub</span>
+          </div>
+        </div>
+        <div class="header-text">
+          <p class="eyebrow">The [S] Factor · Session 2</p>
+          <h1>My Study Planner</h1>
+          <p class="tagline">
+            Built around how <em>you</em> study — not a one-size-fits-all timetable.
+          </p>
+        </div>
+        <div class="title-form">
+          <label for="planner_title">Rename your planner</label>
+          <div class="inline-field">
+            <input id="planner_title" type="text" placeholder="My Study Planner" disabled />
+            <button type="button" class="btn btn-secondary" disabled>Save title (Session 3)</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="layout">
+        <section class="panel tasks-panel" aria-labelledby="tasks-heading">
+          <div class="panel-head">
+            <h2 id="tasks-heading">Tasks</h2>
+            <p>Placeholder tasks — JavaScript will replace these in Session 3.</p>
+          </div>
+          <form class="task-form" onsubmit="return false;">
+            <label for="task_title">New task</label>
+            <div class="inline-field">
+              <input id="task_title" type="text" placeholder="e.g. Revise Chapter 4" disabled />
+              <button type="submit" class="btn btn-primary" disabled>Add task (Session 3)</button>
+            </div>
+          </form>
+          <div class="task-columns">
+            <div>
+              <h3>To do <span class="count">2</span></h3>
+              <ul class="task-list">
+                <li class="task-card"><span class="task-title">Sample: read notes</span></li>
+                <li class="task-card"><span class="task-title">Sample: practice quiz</span></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Done <span class="count">1</span></h3>
+              <ul class="task-list task-list-done">
+                <li class="task-card done">
+                  <span class="task-title">Sample: watch lecture</span>
+                  <span class="badge">✓</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side-stack">
+          <section class="panel notes-panel" aria-labelledby="notes-heading">
+            <h2 id="notes-heading">Notes</h2>
+            <p>Static textarea for layout practice — saving comes in Session 3.</p>
+            <textarea rows="8" placeholder="What helps you focus?" disabled></textarea>
+            <button type="button" class="btn btn-secondary" disabled>Save notes (Session 3)</button>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <p>SparkNext Learning Hub · Session 2 teaching snapshot</p>
+      </footer>
+    </div>
+  </body>
+</html>

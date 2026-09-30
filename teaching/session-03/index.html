@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 3 | My Study Planner</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand-lockup">
+          <img class="brand-mark" src="../../assets/sparknext-mark.svg" width="44" height="44" alt="" />
+          <div class="brand-wordmark">
+            <span class="brand-name">SparkNext</span>
+            <span class="brand-hub">Learning Hub</span>
+          </div>
+        </div>
+        <div class="header-text">
+          <p class="eyebrow">The [S] Factor · Session 3</p>
+          <h1 id="planner-title-heading">My Study Planner</h1>
+          <p class="tagline">Tasks are powered by JavaScript + localStorage.</p>
+        </div>
+        <form id="title-form" class="title-form">
+          <label for="planner_title">Rename your planner</label>
+          <div class="inline-field">
+            <input id="planner_title" type="text" maxlength="80" placeholder="My Study Planner" />
+            <button type="submit" class="btn btn-secondary">Save title</button>
+          </div>
+        </form>
+      </header>
+
+      <ul id="flash-list" class="flash-list" aria-live="polite" hidden></ul>
+
+      <main id="main" class="layout">
+        <section class="panel tasks-panel" aria-labelledby="tasks-heading">
+          <div class="panel-head">
+            <h2 id="tasks-heading">Tasks</h2>
+            <p>Add what you need to do, then mark items complete.</p>
+          </div>
+          <form id="task-form" class="task-form">
+            <label for="task_title">New task</label>
+            <div class="inline-field">
+              <input id="task_title" type="text" maxlength="120" placeholder="e.g. Revise Chapter 4" />
+              <button type="submit" class="btn btn-primary">Add task</button>
+            </div>
+          </form>
+          <div class="task-columns">
+            <div>
+              <h3>To do <span id="active-count" class="count">0</span></h3>
+              <ul id="active-tasks" class="task-list"></ul>
+              <p id="active-empty" class="empty">No open tasks — add one above.</p>
+            </div>
+            <div>
+              <h3>Done <span id="done-count" class="count">0</span></h3>
+              <ul id="done-tasks" class="task-list task-list-done"></ul>
+              <p id="done-empty" class="empty">Completed tasks appear here.</p>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side-stack">
+          <section class="panel notes-panel" aria-labelledby="notes-heading">
+            <h2 id="notes-heading">Notes</h2>
+            <form id="notes-form">
+              <label for="notes" class="visually-hidden">Notes</label>
+              <textarea id="notes" rows="8" maxlength="2000" placeholder="What helps you focus?"></textarea>
+              <button type="submit" class="btn btn-secondary">Save notes</button>
+            </form>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <p>SparkNext Learning Hub · Session 3 teaching snapshot</p>
+      </footer>
+    </div>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

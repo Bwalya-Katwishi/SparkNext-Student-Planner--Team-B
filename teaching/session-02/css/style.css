@@ -1,0 +1,447 @@
+/* SparkNext Learning Hub — brand tokens (see BRAND.md / Brand Guidelines PDF) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --sn-navy: #1a4149;
+  --sn-forest: #0a261a;
+  --sn-deep: #2e170e;
+  --sn-mint: #8fbe9e;
+  --sn-olive: #b5be62;
+  --sn-cream: #fff5d2;
+  --sn-gold: #fad465;
+  --sn-white: #ffffff;
+  --sn-black: #000000;
+
+  --bg: var(--sn-cream);
+  --surface: var(--sn-white);
+  --ink: var(--sn-navy);
+  --muted: #3d5a62;
+  --accent: var(--sn-navy);
+  --accent-soft: var(--sn-mint);
+  --accent-on-dark: var(--sn-cream);
+  --success: var(--sn-forest);
+  --success-bg: #d4e8da;
+  --error: var(--sn-deep);
+  --error-bg: #fff0c4;
+  --radius: 14px;
+  --shadow: 0 12px 28px rgba(26, 65, 73, 0.12);
+  --font-serif: "Merriweather", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: linear-gradient(165deg, var(--sn-cream) 0%, #eef6f0 40%, var(--sn-mint) 100%);
+  background-attachment: fixed;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--sn-gold);
+  color: var(--sn-navy);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  z-index: 10;
+  font-weight: 600;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+/* Brand lockup (logo guidelines: SparkNext serif, Learning Hub sans bold) */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.brand-mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--sn-cream);
+  flex-shrink: 0;
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: var(--sn-cream);
+}
+
+.brand-hub {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sn-gold);
+}
+
+.brand-lockup--on-light .brand-mark,
+.brand-lockup--on-light .brand-name {
+  color: var(--sn-navy);
+}
+
+.brand-lockup--on-light .brand-hub {
+  color: var(--sn-olive);
+}
+
+.site-header {
+  background: var(--sn-navy);
+  color: var(--sn-cream);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.75rem;
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.site-header h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  color: var(--sn-cream);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--sn-gold);
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+}
+
+.tagline {
+  margin: 0;
+  color: rgba(255, 245, 210, 0.92);
+  font-size: 0.98rem;
+}
+
+.site-header label {
+  color: var(--sn-cream);
+}
+
+.site-header input[type="text"] {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--sn-mint);
+  color: var(--sn-navy);
+}
+
+.layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+.panel {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(143, 190, 158, 0.45);
+}
+
+.panel-head h2,
+.panel h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--sn-navy);
+}
+
+.panel-head p,
+.panel p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.side-stack {
+  display: grid;
+  gap: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-sans);
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--sn-mint);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  font-family: var(--font-sans);
+  background: #fbfffc;
+  color: var(--sn-navy);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.inline-field {
+  display: grid;
+  gap: 0.65rem;
+}
+
+@media (min-width: 560px) {
+  .inline-field {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--sn-gold);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--sn-navy);
+  color: var(--sn-cream);
+}
+
+.btn-primary:hover {
+  background: var(--sn-forest);
+}
+
+.btn-secondary {
+  background: var(--sn-olive);
+  color: var(--sn-navy);
+}
+
+.btn-secondary:hover {
+  background: var(--sn-gold);
+}
+
+.btn-small {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  background: var(--sn-mint);
+  color: var(--sn-forest);
+}
+
+.btn-small:hover {
+  background: var(--sn-gold);
+  color: var(--sn-navy);
+}
+
+.task-columns {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .task-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.task-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 245, 210, 0.35);
+  border: 1px solid var(--sn-mint);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+}
+
+.task-card.done {
+  opacity: 0.95;
+  background: var(--success-bg);
+  border-color: var(--sn-mint);
+}
+
+.task-title {
+  flex: 1;
+}
+
+.count {
+  font-size: 0.85rem;
+  background: var(--sn-gold);
+  color: var(--sn-navy);
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.badge {
+  font-weight: 700;
+  color: var(--success);
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.streak-panel {
+  background: linear-gradient(145deg, var(--sn-navy) 0%, var(--sn-forest) 100%);
+  color: var(--sn-cream);
+  border: none;
+}
+
+.streak-panel h2 {
+  color: var(--sn-cream);
+}
+
+.streak-number {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin: 0.25rem 0;
+  color: var(--sn-gold);
+}
+
+.streak-copy {
+  margin-bottom: 0;
+  color: rgba(255, 245, 210, 0.9);
+}
+
+.mood-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.mood-current {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.mood-current strong {
+  color: var(--sn-navy);
+}
+
+.flash-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.flash {
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+.flash-success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--sn-mint);
+}
+
+.flash-error {
+  background: var(--error-bg);
+  color: var(--error);
+  border: 1px solid var(--sn-gold);
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  font-family: var(--font-sans);
+}
+
+.site-footer strong,
+.footer-brand {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--sn-navy);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Session 1 teaching snapshot (minimal page) */
+.page--session1 {
+  max-width: 640px;
+}
+
+.page--session1 h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--sn-navy);
+}
+
+.page--session1 .eyebrow {
+  color: var(--sn-olive);
+}
