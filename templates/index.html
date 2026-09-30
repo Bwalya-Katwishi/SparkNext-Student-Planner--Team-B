@@ -1,8 +1,21 @@
 {% extends "base.html" %}
-{% block title %}{{ title }}{% endblock %}
+{% block title %}My Study Planner{% endblock %}
 {% block body %}
-  <main class="page">
-    <h1>{{ title }}</h1>
-    <p>Session 1 milestone: your planner page is live on Flask.</p>
-  </main>
+  <div class="page">
+    <header class="site-header">
+      <h1>My Study Planner</h1>
+      <p class="tagline">Header section — make the title yours.</p>
+    </header>
+    <main class="layout">
+      <section class="panel" aria-labelledby="tasks-heading">
+        <h2 id="tasks-heading">Tasks</h2>
+        <p>Task area — Session 3 adds real add/complete logic.</p>
+        <ul><li>Sample task one</li><li>Sample task two</li></ul>
+      </section>
+      <section class="panel" aria-labelledby="notes-heading">
+        <h2 id="notes-heading">Notes</h2>
+        <textarea rows="6" placeholder="Your study notes…"></textarea>
+      </section>
+    </main>
+  </div>
 {% endblock %}
